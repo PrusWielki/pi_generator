@@ -2,6 +2,7 @@
 	let pi_numbers_to_generate: number;
 	let pi_function_upper_range: number;
 	let valid: Boolean = true;
+	export let loading: Boolean = false;
 	const validate = () => {
 		if (!Number.isInteger(pi_numbers_to_generate) || !(pi_numbers_to_generate > 0)) {
 			valid = false;
@@ -13,7 +14,16 @@
 		}
 		valid = true;
 		// TODO: If valid then exec
+		fetchPI();
 	};
+
+	async function fetchPI(): Promise<void> {
+		loading = true;
+		const response = await fetch(
+			`/pi?n=${pi_numbers_to_generate}&upper=${pi_function_upper_range}`
+		);
+		loading = false;
+	}
 </script>
 
 <div class="flex w-1/2 flex-col">
