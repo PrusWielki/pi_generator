@@ -1,16 +1,16 @@
 <script lang="ts">
 	import Input from '../input/input.svelte';
 	import Output from '../output/output.svelte';
-	let loading: Boolean;
+	let loading: boolean;
 	let pi: string;
 	let table: string;
-	$: fetch('http://localhost:5173/src/pi.txt')
+	$: fetch(`${window.location.href}src/pi.txt`)
 		.then((response) => response.text())
 		.then((data) => {
 			loading;
 			pi = data;
 		});
-	$: fetch('http://localhost:5173/src/table.txt')
+	$: fetch(`${window.location.href}src/table.txt`)
 		.then((response) => response.text())
 		.then((data) => {
 			loading;

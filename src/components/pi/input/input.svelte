@@ -1,8 +1,8 @@
 <script lang="ts">
 	let pi_numbers_to_generate: number;
 	let pi_function_upper_range: number;
-	let valid: Boolean = true;
-	export let loading: Boolean = false;
+	let valid: boolean = true;
+	export let loading: boolean = false;
 	const validate = () => {
 		if (!Number.isInteger(pi_numbers_to_generate) || !(pi_numbers_to_generate > 0)) {
 			valid = false;
@@ -47,6 +47,7 @@
 			on:click={() => {
 				validate();
 			}}
+			disabled={loading}
 			class="mt-10 w-full border-2 border-black py-4 font-mono transition duration-500 hover:bg-black hover:text-white hover:shadow-sm"
 			>Generate</button
 		>
