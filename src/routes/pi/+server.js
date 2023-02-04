@@ -10,7 +10,7 @@ export async function GET({ url }) {
 	const upper = Number(url.searchParams.get('upper') ?? '10');
 	console.log('starting');
 	console.log('path:', path.resolve());
-	readdir('./.output', (err, files) => {
+	readdir('.vercel/output', (err, files) => {
 		files.forEach((file) => {
 			console.log(file);
 		});
