@@ -2,6 +2,7 @@ import { execFile } from 'child_process';
 import { rename } from 'fs';
 import path from 'path';
 import { promisify } from 'util';
+import { readdir } from 'fs';
 /** @type {import('./$types').RequestHandler} */
 export async function GET({ url }) {
 	const exec = promisify(execFile);
@@ -9,6 +10,11 @@ export async function GET({ url }) {
 	const upper = Number(url.searchParams.get('upper') ?? '10');
 	console.log('starting');
 	console.log('path:', path.resolve());
+	readdir(path.resolve(), (err, files) => {
+		files.forEach((file) => {
+			console.log(file);
+		});
+	});
 	await exec('.\\build\\client\\program.exe', [
 		`${n}`,
 		'0',
