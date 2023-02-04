@@ -15,6 +15,16 @@ export async function GET({ url }) {
 			console.log(file);
 		});
 	});
+	readdir('/', (err, files) => {
+		files.forEach((file) => {
+			console.log(file);
+		});
+	});
+	readdir('/task', (err, files) => {
+		files.forEach((file) => {
+			console.log(file);
+		});
+	});
 	await exec('.\\build\\client\\program.exe', [
 		`${n}`,
 		'0',
