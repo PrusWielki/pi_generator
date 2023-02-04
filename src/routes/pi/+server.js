@@ -27,7 +27,16 @@ export async function GET({ url }) {
 			console.log(file);
 		});
 	});
-	await exec('', [`${n}`, '0', `${n}`, 'pi.txt', 'table.txt', '0', `${upper}`, 'pi.txt']);
+	await exec('./src/executables/unix/program', [
+		`${n}`,
+		'0',
+		`${n}`,
+		'pi.txt',
+		'table.txt',
+		'0',
+		`${upper}`,
+		'pi.txt'
+	]);
 
 	rename('./pi.txt', './src/pi.txt', function (err) {
 		if (err) console.log(err);
