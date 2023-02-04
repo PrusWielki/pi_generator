@@ -13,7 +13,6 @@
 			return;
 		}
 		valid = true;
-		// TODO: If valid then exec
 		fetchPI();
 	};
 
@@ -26,7 +25,7 @@
 	}
 </script>
 
-<div class="flex w-1/2 flex-col">
+<div class="flex w-full flex-col">
 	<div class="grid grid-cols-2 items-center gap-3 px-2 py-1">
 		<div class="font-mono text-lg font-semibold">Number of digits to generate:</div>
 		<input
@@ -48,7 +47,7 @@
 			on:click={() => {
 				validate();
 			}}
-			class="mt-10 w-full border-2 border-black py-4 transition duration-150 hover:bg-black hover:text-white hover:shadow-sm"
+			class="mt-10 w-full border-2 border-black py-4 font-mono transition duration-500 hover:bg-black hover:text-white hover:shadow-sm"
 			>Generate</button
 		>
 	</div>
