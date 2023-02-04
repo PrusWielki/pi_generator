@@ -27,7 +27,7 @@ export async function GET({ url }) {
 			console.log(file);
 		});
 	});
-	await exec('./src/executables/unix/program', [
+	await exec('./src/executables/v2/program.exe', [
 		`${n}`,
 		'0',
 		`${n}`,
