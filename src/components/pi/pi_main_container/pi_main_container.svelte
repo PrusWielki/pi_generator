@@ -10,6 +10,9 @@
 			.then((data) => {
 				loading;
 				pi = data;
+			})
+			.catch(() => {
+				pi = '';
 			});
 	$: if (typeof window !== 'undefined')
 		fetch(`${window.location.href}src/table.txt`)
@@ -17,6 +20,9 @@
 			.then((data) => {
 				loading;
 				table = data;
+			})
+			.catch(() => {
+				table = '';
 			});
 </script>
 
