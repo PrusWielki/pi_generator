@@ -4,18 +4,20 @@
 	let loading: boolean;
 	let pi: string;
 	let table: string;
-	$: fetch(`${window.location.href}src/pi.txt`)
-		.then((response) => response.text())
-		.then((data) => {
-			loading;
-			pi = data;
-		});
-	$: fetch(`${window.location.href}src/table.txt`)
-		.then((response) => response.text())
-		.then((data) => {
-			loading;
-			table = data;
-		});
+	$: if (typeof window !== 'undefined')
+		fetch(`${window.location.href}src/pi.txt`)
+			.then((response) => response.text())
+			.then((data) => {
+				loading;
+				pi = data;
+			});
+	$: if (typeof window !== 'undefined')
+		fetch(`${window.location.href}src/table.txt`)
+			.then((response) => response.text())
+			.then((data) => {
+				loading;
+				table = data;
+			});
 </script>
 
 <div class="flex w-full flex-row items-start justify-center">
