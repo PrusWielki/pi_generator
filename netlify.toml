@@ -1,2 +1,2 @@
 [functions]
-	included_files = ["src/executables/unix/program"]
+	included_files = ["src/executables/unix/program","src/executables/v2/program.exe"]
