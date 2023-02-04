@@ -10,21 +10,12 @@ export async function GET({ url }) {
 	const upper = Number(url.searchParams.get('upper') ?? '10');
 	console.log('starting');
 	console.log('path:', path.resolve());
-	readdir(path.resolve() + '/node_modules/', (err, files) => {
+	readdir('./.output', (err, files) => {
 		files.forEach((file) => {
 			console.log(file);
 		});
 	});
-	readdir('/', (err, files) => {
-		files.forEach((file) => {
-			console.log(file);
-		});
-	});
-	readdir('/task', (err, files) => {
-		files.forEach((file) => {
-			console.log(file);
-		});
-	});
+
 	await exec('.\\build\\client\\program.exe', [
 		`${n}`,
 		'0',
