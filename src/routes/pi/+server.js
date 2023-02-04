@@ -8,8 +8,8 @@ export async function GET({ url }) {
 	const n = Number(url.searchParams.get('n') ?? '10');
 	const upper = Number(url.searchParams.get('upper') ?? '10');
 	console.log('starting');
-	console.log(path.resolve());
-	await exec('..\\..\\..\\..\\client\\program.exe', [
+	console.log('path:', path.resolve());
+	await exec('.\\build\\client\\program.exe', [
 		`${n}`,
 		'0',
 		`${n}`,
