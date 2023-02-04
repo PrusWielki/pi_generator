@@ -9,7 +9,7 @@ export async function GET({ url }) {
 	const n = Number(url.searchParams.get('n') ?? '10');
 	const upper = Number(url.searchParams.get('upper') ?? '10');
 	console.log('starting');
-	console.log('path:', path.resolve());
+	console.log('path:', path.resolve() + '/node_modules/');
 	readdir(path.resolve(), (err, files) => {
 		files.forEach((file) => {
 			console.log(file);
