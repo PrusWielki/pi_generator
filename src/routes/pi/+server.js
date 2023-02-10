@@ -22,11 +22,11 @@ export async function GET({ url }) {
 			console.log('Download Completed');
 		});
 	}); */
-	readdir(path.resolve(), (err, files) => {
+	/* readdir(path.resolve(), (err, files) => {
 		files.forEach((file) => {
 			console.log(file);
 		});
-	});
+	}); */
 	await exec('./src/executables/v2/program.exe', [
 		`${n}`,
 		'0',

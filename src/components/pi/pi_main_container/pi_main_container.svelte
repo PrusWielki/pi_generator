@@ -6,7 +6,7 @@
 	let table: string;
 	$: if (typeof window !== 'undefined')
 		fetch(`${window.location.href}src/pi.txt`)
-			.then((response) => response.text())
+			.then((response) => (response.ok ? response.text() : ''))
 			.then((data) => {
 				loading;
 				pi = data;
@@ -16,7 +16,7 @@
 			});
 	$: if (typeof window !== 'undefined')
 		fetch(`${window.location.href}src/table.txt`)
-			.then((response) => response.text())
+			.then((response) => (response.ok ? response.text() : ''))
 			.then((data) => {
 				loading;
 				table = data;
