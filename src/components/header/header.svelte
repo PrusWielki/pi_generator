@@ -4,9 +4,9 @@
 </script>
 
 <div class="flex w-full cursor-default flex-col items-center justify-center text-center font-mono">
-	<div class="max-w-lg py-4 px-4">
+	<div class="mt-4 max-w-lg  px-4">
 		<div class="text-xl font-bold sm:text-2xl md:text-4xl">{title}</div>
-		<div class="text-sm sm:text-lg">
+		<div class="mt-8 text-sm leading-loose sm:text-lg">
 			{description}
 		</div>
 	</div>

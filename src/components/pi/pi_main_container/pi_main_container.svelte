@@ -32,7 +32,7 @@
 </script>
 
 <div
-	class="flex w-full flex-col  items-center justify-center overflow-x-hidden md:flex-row md:items-start"
+	class="mt-8 flex w-full  flex-col items-center justify-center overflow-x-hidden md:flex-row md:items-start"
 >
 	<div
 		class={` flex w-1/2 justify-end ${ready ? '' : '-translate-x-full'} transition duration-1000`}

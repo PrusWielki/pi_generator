@@ -27,22 +27,22 @@
 
 <div class="flex w-full max-w-xl flex-col">
 	<div class="flex flex-row items-center gap-3 px-2 py-1">
-		<div class="w-3/4 cursor-default font-mono text-lg font-semibold">
+		<div class="w-3/4 cursor-default font-mono text-base font-semibold md:text-lg">
 			Number of digits to generate:
 		</div>
 		<input
 			type="number"
-			class="h-12 w-1/4 appearance-none rounded-md border-2 border-black text-center font-mono font-semibold"
+			class="h-12 w-1/4 appearance-none rounded-md border-2 border-black text-center font-mono font-semibold hover:shadow-md"
 			bind:value={pi_numbers_to_generate}
 		/>
 	</div>
 	<div class="flex flex-row items-center gap-3  px-2 py-1">
-		<div class="w-3/4 cursor-default font-mono text-lg font-semibold">
+		<div class="w-3/4 cursor-default font-mono text-base font-semibold md:text-lg">
 			Upper range of f_pi function arguments:
 		</div>
 		<input
 			type="number"
-			class="h-12 w-1/4 appearance-none rounded-md border-2 border-black text-center font-mono font-semibold"
+			class="h-12 w-1/4 appearance-none rounded-md border-2 border-black text-center font-mono font-semibold hover:shadow-md"
 			bind:value={pi_function_upper_range}
 		/>
 	</div>
@@ -52,12 +52,12 @@
 				validate();
 			}}
 			disabled={loading}
-			class="mt-10 w-full rounded-md border-2 border-black py-4 font-mono transition duration-500 hover:bg-black hover:text-white hover:shadow-sm"
+			class="mt-10 w-full rounded-md border-2 border-black py-4 font-mono transition duration-500 hover:bg-black hover:text-white hover:shadow-md"
 			>Generate</button
 		>
 	</div>
 	{#if valid === false}
-		<div class="w-full py-1 text-center font-mono text-lg font-semibold text-red-600">
+		<div class="w-full py-1 text-center font-mono text-base font-semibold text-red-600 md:text-lg">
 			Provided values are not correct
 		</div>
 	{/if}
