@@ -1,6 +1,11 @@
 <script lang="ts">
 	import Input from '../input/input.svelte';
 	import Output from '../output/output.svelte';
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => (ready = true));
+
 	let loading: boolean;
 	let pi: string;
 	let table: string;
@@ -26,13 +31,19 @@
 			});
 </script>
 
-<div class="flex w-full flex-row items-start justify-center">
-	<div class="w-1/2">
+<div
+	class="flex w-full flex-col  items-center justify-center overflow-x-hidden md:flex-row md:items-start"
+>
+	<div
+		class={` flex w-1/2 justify-end ${ready ? '' : '-translate-x-full'} transition duration-1000`}
+	>
 		<Input bind:loading />
 	</div>
 	{#if loading == true}
 		<div class="w-1/2 animate-pulse text-center font-mono text-4xl font-bold">Generating pi...</div>
 	{:else}
-		<div class="w-1/2"><Output bind:pi bind:table /></div>
+		<div class={`w-1/2 items-start ${ready ? '' : 'translate-x-full'} transition duration-1000`}>
+			<Output bind:pi bind:table />
+		</div>
 	{/if}
 </div>

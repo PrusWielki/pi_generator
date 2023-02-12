@@ -3,11 +3,19 @@
 	export let table: string;
 </script>
 
-<div class="flex flex-col justify-items-center  gap-5">
+<div class="flex max-w-xl flex-col justify-items-center gap-5">
 	<div class="px-2 py-1">
-		<textarea disabled bind:value={pi} class="h-36 w-full self-start border-2 border-black" />
+		<textarea
+			disabled
+			bind:value={pi}
+			class="h-36 w-full self-start rounded-md border-2 border-black"
+		/>
 	</div>
 	<div class="px-2 py-1">
-		<textarea disabled bind:value={table} class="h-36 w-full self-end border-2 border-black" />
+		<textarea
+			disabled
+			bind:value={table}
+			class="h-36 w-full self-end rounded-md border-2 border-black"
+		/>
 	</div>
 </div>
