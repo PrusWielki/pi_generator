@@ -52,7 +52,7 @@
 				validate();
 			}}
 			disabled={loading}
-			class="mt-10 w-full rounded-md border-2 border-black dark:text-slate-300 dark:border-slate-300 py-4 font-mono transition duration-500 dark:hover:bg-slate-300 dark:hover:text-black hover:bg-black hover:text-white hover:shadow-md"
+			class="mt-10 w-full bg-white dark:bg-stone-800 rounded-md border-2 border-black dark:text-slate-300 dark:border-slate-300 py-4 font-mono transition duration-500 dark:hover:bg-slate-300 dark:hover:text-black hover:bg-black hover:text-white hover:shadow-md"
 			>Generate</button
 		>
 	</div>
