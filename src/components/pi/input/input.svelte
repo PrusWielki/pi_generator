@@ -27,22 +27,22 @@
 
 <div class="flex w-full max-w-xl flex-col">
 	<div class="flex flex-row items-center gap-3 px-2 py-1">
-		<div class="w-3/4 cursor-default font-mono text-base font-semibold md:text-lg">
+		<div class="w-3/4 cursor-default font-mono text-base font-semibold md:text-lg dark:text-slate-300">
 			Number of digits to generate:
 		</div>
 		<input
 			type="number"
-			class="h-12 w-1/4 appearance-none rounded-md border-2 border-black text-center font-mono font-semibold hover:shadow-md"
+			class="h-12 w-1/4 appearance-none rounded-md border-2 dark:bg-zinc-700 dark:text-slate-300 dark:border-slate-300 border-black text-center font-mono font-semibold hover:shadow-md"
 			bind:value={pi_numbers_to_generate}
 		/>
 	</div>
 	<div class="flex flex-row items-center gap-3  px-2 py-1">
-		<div class="w-3/4 cursor-default font-mono text-base font-semibold md:text-lg">
+		<div class="w-3/4 cursor-default font-mono text-base font-semibold md:text-lg dark:text-slate-300">
 			Upper range of f_pi function arguments:
 		</div>
 		<input
 			type="number"
-			class="h-12 w-1/4 appearance-none rounded-md border-2 border-black text-center font-mono font-semibold hover:shadow-md"
+			class="h-12 w-1/4 appearance-none rounded-md border-2 dark:bg-zinc-700 dark:text-slate-300 border-black dark:border-slate-300 text-center font-mono font-semibold hover:shadow-md"
 			bind:value={pi_function_upper_range}
 		/>
 	</div>
@@ -52,7 +52,7 @@
 				validate();
 			}}
 			disabled={loading}
-			class="mt-10 w-full rounded-md border-2 border-black py-4 font-mono transition duration-500 hover:bg-black hover:text-white hover:shadow-md"
+			class="mt-10 w-full rounded-md border-2 border-black dark:text-slate-300 dark:border-slate-300 py-4 font-mono transition duration-500 dark:hover:bg-slate-300 dark:hover:text-black hover:bg-black hover:text-white hover:shadow-md"
 			>Generate</button
 		>
 	</div>

@@ -6,7 +6,7 @@
 	import { HEADER_TITLE, HEADER_DESCRIPTION } from '../content/header/header_content';
 </script>
 
-<div class="flex max-h-screen w-full flex-col">
+<div class="flex h-screen w-full flex-col dark:bg-stone-800 transition-colors duration-700">
 	<Header title={HEADER_TITLE} description={HEADER_DESCRIPTION} />
 	<PiMainContainer />
 </div>
