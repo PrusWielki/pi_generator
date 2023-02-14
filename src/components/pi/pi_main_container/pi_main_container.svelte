@@ -29,8 +29,24 @@
 			.catch(() => {
 				table = '';
 			});
+	let currentTime:number=0;
+	let interval:NodeJS.Timer;
+	const startInterval = ()=>{currentTime = 0;
+		interval = setInterval(function() {
+    currentTime++;
+	console.log(currentTime)
+ }, 1000);}
+ const endInterval = ()=>{clearInterval(interval);}
+
+	$: if(loading) {
+		startInterval();
+	}
+	else{
+		endInterval();
+	}
 </script>
 
+<div class="flex flex-col">
 <div
 	class="mt-8 flex w-full  flex-col items-center justify-center overflow-x-hidden md:flex-row md:items-start"
 >
@@ -40,10 +56,15 @@
 		<Input bind:loading />
 	</div>
 	{#if loading == true}
-		<div class="w-1/2 animate-pulse text-center font-mono text-4xl font-bold">Generating pi...</div>
+		<div class="w-1/2 animate-pulse flex flex-col gap-12 items-center dark:text-slate-300 justify-center h-72 text-center font-mono text-4xl font-bold"><div></div>Generating pi...<div>{currentTime}</div></div>
 	{:else}
 		<div class={`w-1/2 items-start ${ready ? '' : 'translate-x-full'} transition duration-1000`}>
 			<Output bind:pi bind:table />
 		</div>
+	{/if}
+
+</div>
+	{#if currentTime>0&&loading==false}
+	<div class="text-center sm:text-2xl font-mono font-semibold text-white dark:text-cyan-500 mt-12">Last Execution Time: {currentTime} s</div>
 	{/if}
 </div>
