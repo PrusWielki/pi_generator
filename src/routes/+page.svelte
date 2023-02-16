@@ -27,8 +27,14 @@ document.documentElement.classList.add('dark')
 
 </script>
 
-<div class={`flex h-max min-h-screen w-full flex-col bg-cover transition-colors duration-700 ${subsTheme==='dark'?"bg-[url('bg-dark-new.svg')]":"bg-[url('bg-wave-light.svg')]"}`} >
+<div class={`flex h-max min-h-screen w-full flex-col bg-cover transition-colors duration-700 ${subsTheme==='dark'?"bg-[url('bg-dark-new.svg')]":"bg-[url('bg-wave-light.svg')]"} container`} >
 	<Header title={HEADER_TITLE} description={HEADER_DESCRIPTION} />
 	<DarkModeButton/>
 	<PiMainContainer />
 </div>
+
+<style>
+	.container{
+		background-image: url('bg-dark-new.svg');
+	}
+</style>
