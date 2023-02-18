@@ -56,7 +56,7 @@
 		<Input bind:loading />
 	</div>
 	{#if loading == true}
-		<div class="sm:w-1/2 animate-pulse flex flex-col gap-12 items-center dark:sm:text-slate-300 dark:text-stone-900 justify-center h-72 text-center font-mono text-4xl font-bold"><div></div>Generating pi...<div>{currentTime}</div></div>
+		<div class="sm:w-1/2 animate-pulse flex flex-col gap-12 items-center dark:sm:text-slate-300 justify-center h-72 text-center font-mono text-4xl font-bold"><div></div>Generating pi...<div>{currentTime}</div></div>
 	{:else}
 		<div class={`sm:w-1/2 items-start ${ready ? '' : 'translate-x-full'} transition duration-1000`}>
 			<Output bind:pi bind:table />
