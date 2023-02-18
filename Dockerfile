@@ -1,5 +1,5 @@
 # Our Node base image
-FROM node:18
+FROM node:alpine
 
 # Set the Node environment to development to ensure all packages are installed
 ENV NODE_ENV development
@@ -16,9 +16,10 @@ RUN yarn
 COPY . .
 
 # Expose port 3000 for the SvelteKit app and 24678 for Vite's HMR
-EXPOSE 3000
-EXPOSE 24678
+# EXPOSE 3000
+# EXPOSE 24678
 
 
 # Run `yarn dev` and set the host to 0.0.0.0 so we can access the web app from outside
-CMD ["yarn", "dev", "--host", "0.0.0.0"]
+CMD yarn preview --port $PORT --host
+# CMD node index.js
