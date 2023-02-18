@@ -27,15 +27,13 @@ export async function GET({ url }) {
 			console.log(file);
 		});
 	}); */
-	await exec('./src/executables/v2/program.exe', [
-		`${n}`,
-		'0',
+	await exec('./src/executables/unix2/program', [
 		`${n}`,
 		'pi.txt',
 		'table.txt',
+		'pi.txt',
 		'0',
-		`${upper}`,
-		'pi.txt'
+		`${upper}`
 	]);
 
 	rename('./pi.txt', './src/pi.txt', function (err) {
