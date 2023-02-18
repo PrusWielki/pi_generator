@@ -4,7 +4,6 @@
     export let openAbout: boolean;
 	let ready = false;
 	onMount(() => (ready = true));
-    // addEventListener(,(e)=>{console.log(e);});
 </script>
 <div>
     <div on:keypress={()=>{openAbout=false}} on:click={()=>{openAbout=false;}} class={`right-full w-2/3 top-0 bg-black transition duration-700 delay-150 opacity-10 h-screen fixed ${openAbout?'translate-x-full':''}`} />
