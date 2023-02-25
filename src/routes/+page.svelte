@@ -35,7 +35,6 @@ document.documentElement.classList.add('dark')
 <div class={`flex h-max min-h-screen w-full flex-col bg-cover transition-colors duration-700 ${subsTheme==='dark'?"bg-[url('/bg-dark-new.svg')]":"bg-[url('/bg-wave-light.svg')]"}`} >
 	<Header title={HEADER_TITLE} description={HEADER_DESCRIPTION} />
 	<DarkModeButton/>
-	<OpenShelfButton bind:openAbout/>
 
 	<ShelfAboutTable bind:openAbout />
 	<PiMainContainer />
